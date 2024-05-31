@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.externals import joblib
+import joblib
 
 
 app = Flask(__name__)
@@ -20,7 +20,6 @@ def youtube():
 @app.route('/text',methods=['POST'])
 def text():
 	return render_template('text.html')
-
 @app.route('/email',methods=['POST'])
 def email():
 	return render_template('email.html')
